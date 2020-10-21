@@ -1,10 +1,10 @@
 fun main() {
-    commision(totalMonth = 30000.0, moneyTransfer = 20000.0, spentToday = 10000.0)
-    commision(totalMonth = 34000.0, moneyTransfer = 2000.0, spentToday = 1000.0)
-    commision(cardType = "MasterCard", totalMonth = 350.0, moneyTransfer = 20.0, spentToday = 7800.0)
-    commision(cardType = "Maestro", totalMonth = 306660.0, moneyTransfer = 300.0, spentToday = 7000.0)
-    commision(cardType = "Visa", totalMonth = 7000.0, moneyTransfer = 700.0, spentToday = 800.0)
-    commision(cardType = "World", totalMonth = 9000.0, moneyTransfer = 70.0, spentToday = 8000.0)
+    println(commision(totalMonth = 30000.0, moneyTransfer = 20000.0, spentToday = 10000.0))
+    println(commision(totalMonth = 34000.0, moneyTransfer = 2000.0, spentToday = 1000.0))
+    println(commision(cardType = "MasterCard", totalMonth = 350.0, moneyTransfer = 20.0, spentToday = 7800.0))
+    println(commision(cardType = "Maestro", totalMonth = 306660.0, moneyTransfer = 300.0, spentToday = 7000.0))
+    println(commision(cardType = "Visa", totalMonth = 7000.0, moneyTransfer = 700.0, spentToday = 800.0))
+    println(commision(cardType = "World", totalMonth = 9000.0, moneyTransfer = 70.0, spentToday = 8000.0))
 }
 
 fun commision(
@@ -13,7 +13,7 @@ fun commision(
     moneyTransfer: Double,
     spentToday: Double = 0.0,
     happyDay: Boolean = false
-) {
+): String {
     var commision = 0.0
 
     when (cardType) {
@@ -47,6 +47,5 @@ fun commision(
             }
         }
     }
-    println("Комиссия - ${commision.toString().split(".")[0]} рублей ${commision.toString().split(".")[1]} копеек")
-    println()
+    return ("Комиссия - ${commision.toString().split(".")[0]} рублей ${commision.toString().split(".")[1]} копеек")
 }
