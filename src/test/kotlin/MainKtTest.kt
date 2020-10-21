@@ -101,4 +101,21 @@ class MainKtTest {
 
         assertEquals("Комиссия - 35 рублей 0 копеек", result)
     }
+
+    @Test
+    fun commision7() {
+        val cardType = "World"
+        val totalMonth = 9000.0
+        val moneyTransfer = 70.0
+        val spentToday = 8000.0
+
+        val result = commision(
+            cardType = cardType,
+            totalMonth = totalMonth,
+            moneyTransfer = moneyTransfer,
+            spentToday = spentToday
+        )
+
+        assertEquals("This should be broken", result)
+    }
 }
